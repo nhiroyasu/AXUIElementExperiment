@@ -1,6 +1,7 @@
 import Cocoa
 import SwiftUI
 
+/*
 class ViewController: NSViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,4 +21,5 @@ class ViewController: NSViewController {
         self.view.addSubview(hostingController.view)
     }
 }
+*/
 

@@ -1,7 +1,6 @@
 import Cocoa
 import SwiftUI
 
-/*
 class ViewController: NSViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,7 +18,7 @@ class ViewController: NSViewController {
         hostingController.view.frame = self.view.bounds
         hostingController.view.autoresizingMask = [.width, .height]
         self.view.addSubview(hostingController.view)
+
+        self.view.window?.toolbarStyle = .automatic
     }
 }
-*/
-

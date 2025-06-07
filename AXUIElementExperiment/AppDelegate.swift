@@ -29,8 +29,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         AXObserverCreate(
             xcodePID,
             { observer, element, notification, refcon in
-                selectedTextPublisher.send(element)
-
                 var roleRef: CFTypeRef?
                 var result = AXUIElementCopyAttributeValue(element, kAXRoleAttribute as CFString, &roleRef)
                 if result == .success {
@@ -47,6 +45,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
                 result = AXUIElementCopyAttributeValue(element, kAXSelectedTextRangeAttribute as CFString, &selectedTextRangeAttribute)
                 if result == .success {
                     print("Focused Element Selected Text Range: \(selectedTextRangeAttribute)")
+                }
+
+                if selectedTextAttribute as? String != "" {
+                    selectedTextPublisher.send(element)
                 }
             },
             &observer
@@ -78,4 +80,3 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         return true
     }
 }
-

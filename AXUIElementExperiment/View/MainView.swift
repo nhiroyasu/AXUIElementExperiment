@@ -18,6 +18,11 @@ struct MainView: View {
                 .tabItem {
                     Label("Hierarchy", systemImage: "list.bullet.rectangle")
                 }
+
+            KeyboardEventCaptureView()
+                .tabItem {
+                    Label("Keyboard", systemImage: "keyboard")
+                }
         }
         .tabViewStyle(.sidebarAdaptable)
     }

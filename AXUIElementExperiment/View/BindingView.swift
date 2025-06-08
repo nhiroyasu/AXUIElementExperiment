@@ -11,9 +11,12 @@ struct BindingView: View {
 
     var body: some View {
         VStack(alignment: .leading, spacing: 8) {
+            Text("Xcodeで選択されているテキストを取得")
+                .font(.title.bold())
+                .frame(maxWidth: .infinity, alignment: .center)
             Label {
                 Text(title)
-                    .font(.title.bold())
+                    .font(.title2.bold())
             } icon: {
                 Image(nsImage: image ?? NSImage())
             }

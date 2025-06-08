@@ -14,6 +14,9 @@ struct AXHierarchyView: View {
 
     var body: some View {
         List {
+            Text("XcodeのUI階層")
+                .font(.title.bold())
+                .frame(maxWidth: .infinity, alignment: .center)
             OutlineGroup(root, children: \.children) { node in
                 VStack(alignment: .leading, spacing: 4) {
                     HStack {
@@ -46,6 +49,5 @@ struct AXHierarchyView: View {
             }
         }
         .listStyle(.sidebar)
-        .frame(minWidth: 400, minHeight: 600)
     }
 }

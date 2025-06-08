@@ -7,10 +7,15 @@ struct KeyboardEventCaptureView: View {
     private var eventTap: CFMachPort?
 
     var body: some View {
-        TextEditor(text: $viewModel.text)
-            .padding()
-            .font(.title2)
-            .frame(minWidth: 400, minHeight: 400)
+        VStack {
+            Text("グローバルキーボードイベントを取得")
+                .font(.title.bold())
+                .frame(maxWidth: .infinity, alignment: .center)
+            TextEditor(text: $viewModel.text)
+                .padding()
+                .font(.title2)
+        }
+        .padding()
     }
 }
 
